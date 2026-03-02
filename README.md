@@ -1,6 +1,6 @@
-# Stock-Tracking-and-Portfolio-Management-Platform
+# Stock-Trading-and-Portfolio-Management-Platform
 
-Stock Tracking and Portfolio Management Platform is a comprehensive web application designed for stock trading, portfolio management, and market analysis. It provides users with tools to track stocks, manage their investments, view market news, and interact with an AI assistant for financial insights. The platform caters to regular users, brokers, and administrators, each with dedicated functionalities.
+Stock Trading and Portfolio Management Platform is a comprehensive web application designed for stock trading, portfolio management, and market analysis. It provides users with tools to track stocks, manage their investments, view market news, and interact with an AI assistant for financial insights. The platform caters to regular users, brokers, and administrators, each with dedicated functionalities.
 
 ## ✨ Key Features
 
