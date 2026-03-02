@@ -1,0 +1,178 @@
+/* src/assets/styles/theme.css */
+
+:root {
+    /* Light theme variables (default) */
+    --primary: #1E88E5;
+    --secondary: #00ACC1;
+    --accent: #43A047;
+    --danger: #E53935;
+    --neutralBg: #F9FAFB;
+    --card: #FFFFFF;
+    --textPrimary: #212121;
+    --textSecondary: #757575;
+    --border: #E0E0E0;
+    
+    /* Additional color variables */
+    --success: var(--accent);
+    --warning: #FFC107;
+    --info: #2196F3;
+    
+    /* Spacing */
+    --spacing-xs: 0.25rem;
+    --spacing-sm: 0.5rem;
+    --spacing-md: 1rem;
+    --spacing-lg: 1.5rem;
+    --spacing-xl: 2rem;
+    
+    /* Border radius */
+    --border-radius-sm: 0.25rem;
+    --border-radius-md: 0.5rem;
+    --border-radius-lg: 1rem;
+    
+    /* Shadows */
+    --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    
+    /* Transitions */
+    --transition-speed: 0.3s;
+  }
+  
+  /* Dark Theme */
+  body.dark-theme {
+    --primary: #90CAF9;
+    --secondary: #80DEEA;
+    --accent: #A5D6A7;
+    --danger: #EF9A9A;
+    --neutralBg: #121212;
+    --card: #1E1E1E;
+    --textPrimary: #E0E0E0;
+    --textSecondary: #BDBDBD;
+    --border: #2E2E2E;
+    
+    /* Adjust shadows for dark mode */
+    --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.2);
+    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.3), 0 2px 4px -1px rgba(0, 0, 0, 0.15);
+    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.3), 0 4px 6px -2px rgba(0, 0, 0, 0.15);
+  }
+  
+  /* Apply theme to elements */
+  body {
+    background-color: var(--neutralBg);
+    color: var(--textPrimary);
+    transition: all var(--transition-speed) ease;
+  }
+  
+  /* Card styles */
+  .stockwise-card {
+    background-color: var(--card);
+    border: 1px solid var(--border);
+    border-radius: var(--border-radius-md);
+    box-shadow: var(--shadow-sm);
+    transition: all var(--transition-speed) ease;
+  }
+  
+  .stockwise-card:hover {
+    box-shadow: var(--shadow-md);
+  }
+  
+  /* Button styles */
+  .btn-primary {
+    background-color: var(--primary);
+    border-color: var(--primary);
+  }
+  
+  .btn-secondary {
+    background-color: var(--secondary);
+    border-color: var(--secondary);
+  }
+  
+  .btn-success {
+    background-color: var(--accent);
+    border-color: var(--accent);
+  }
+  
+  .btn-danger {
+    background-color: var(--danger);
+    border-color: var(--danger);
+  }
+  
+  /* Table styles */
+  .table-themed {
+    color: var(--textPrimary);
+    border-color: var(--border);
+  }
+  
+  .table-themed thead th {
+    background-color: var(--neutralBg);
+    color: var(--textSecondary);
+    border-bottom-color: var(--border);
+  }
+  
+  .table-themed tbody tr:hover {
+    background-color: rgba(0, 0, 0, 0.03);
+  }
+  
+  body.dark-theme .table-themed tbody tr:hover {
+    background-color: rgba(255, 255, 255, 0.03);
+  }
+  
+  /* Form styles */
+  .form-control, .input-group-text {
+    background-color: var(--card);
+    border-color: var(--border);
+    color: var(--textPrimary);
+  }
+  
+  /* Navbar styles */
+  .navbar-themed {
+    background-color: var(--card);
+    border-bottom: 1px solid var(--border);
+  }
+  
+  .navbar-themed .navbar-brand {
+    color: var(--primary);
+  }
+  
+  .navbar-themed .nav-link {
+    color: var(--textSecondary);
+  }
+  
+  .navbar-themed .nav-link:hover, 
+  .navbar-themed .nav-link.active {
+    color: var(--primary);
+  }
+  
+  /* Badge styles */
+  .badge-primary {
+    background-color: var(--primary);
+  }
+  
+  .badge-secondary {
+    background-color: var(--secondary);
+  }
+  
+  .badge-success {
+    background-color: var(--accent);
+  }
+  
+  .badge-danger {
+    background-color: var(--danger);
+  }
+  
+  /* Theme toggle button */
+  .theme-toggle {
+    cursor: pointer;
+    background: none;
+    border: none;
+    color: var(--textSecondary);
+    font-size: 1.25rem;
+    padding: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .theme-toggle:hover {
+    color: var(--primary);
+  }

@@ -1,0 +1,233 @@
+/* WatchlistPreview.css */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap");
+
+/* Theme Variables */
+:root {
+  /* Light Mode */
+  --primary-light: #1e88e5;
+  --secondary-light: #00acc1;
+  --accent-light: #43a047;
+  --danger-light: #e53935;
+  --neutral-bg-light: #f9fafb;
+  --card-bg-light: #ffffff;
+  --text-primary-light: #212121;
+  --text-secondary-light: #757575;
+  --border-light: #e0e0e0;
+
+  /* Dark Mode */
+  --primary-dark: #90caf9;
+  --secondary-dark: #80deea;
+  --accent-dark: #a5d6a7;
+  --danger-dark: #ef9a9a;
+  --neutral-bg-dark: #121212;
+  --card-bg-dark: #1e1e1e;
+  --text-primary-dark: #e0e0e0;
+  --text-secondary-dark: #bdbdbd;
+  --border-dark: #2e2e2e;
+
+  /* Active theme (default to light) */
+  --primary-custom: var(--primary-light);
+  --secondary-custom: var(--secondary-light);
+  --accent-custom: var(--accent-light);
+  --danger-custom: var(--danger-light);
+  --neutral-bg-custom: var(--neutral-bg-light);
+  --card-bg-custom: var(--card-bg-light);
+  --text-primary-custom: var(--text-primary-light);
+  --text-secondary-custom: var(--text-secondary-light);
+  --border-custom: var(--border-light);
+  --success-custom: var(--accent-light);
+}
+
+/* Font Imports */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap");
+
+.font-poppins {
+  font-family: "Poppins", sans-serif;
+}
+
+.font-inter {
+  font-family: "Inter", sans-serif;
+}
+
+/* Card Styles */
+.custom-card {
+  background-color: var(--card-bg-light);
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  border: none;
+  padding: 1.5rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.custom-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Stock Item Styles */
+.stock-item {
+  position: relative;
+}
+
+.price-pill {
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  font-family: "Inter", sans-serif;
+}
+
+.positive-change {
+  background-color: rgba(67, 160, 71, 0.15);
+  color: var(--accent-light);
+}
+
+.negative-change {
+  background-color: rgba(229, 57, 53, 0.15);
+  color: var(--danger-light);
+}
+
+/* Button Styles */
+.custom-btn-primary {
+  background-color: var(--primary-light) !important;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.custom-btn-primary:hover {
+  background-color: #1976d2; /* Slightly darker */
+  box-shadow: 0 5px 15px rgba(30, 136, 229, 0.3);
+  transform: translateY(-2px);
+}
+
+.buy-btn {
+  background-color: var(--accent-light) !important;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.buy-btn:hover {
+  background-color: #388e3c; /* Slightly darker */
+  box-shadow: 0 5px 15px rgba(67, 160, 71, 0.3);
+}
+
+.sell-btn {
+  background-color: var(--danger-light) !important;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.sell-btn:hover {
+  background-color: #d32f2f; /* Slightly darker */
+  box-shadow: 0 5px 15px rgba(229, 57, 53, 0.3);
+}
+
+/* Modal Styles */
+.modal-content {
+  border: none;
+  overflow: hidden;
+}
+
+.bg-primary-custom {
+  background-color: var(--primary-light);
+}
+
+.bg-danger-custom {
+  background-color: var(--danger-light);
+}
+
+.modal-header {
+  border-bottom: none;
+  padding: 1.5rem;
+}
+
+.modal-footer {
+  border-top: none;
+  padding: 1.25rem;
+}
+
+/* Form control styles */
+.form-control {
+  border: 1px solid var(--border-light);
+  border-radius: 8px;
+  padding: 0.75rem;
+  font-family: "Inter", sans-serif;
+}
+
+.form-control:focus {
+  box-shadow: 0 0 0 3px rgba(30, 136, 229, 0.25);
+  border-color: var(--primary-light);
+}
+
+/* Input group buttons */
+.input-group .btn {
+  border-color: var(--border-light);
+  color: var(--text-secondary-light);
+}
+
+/* Dark mode media query */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --primary-custom: var(--primary-dark);
+    --secondary-custom: var(--secondary-dark);
+    --accent-custom: var(--accent-dark);
+    --danger-custom: var(--danger-dark);
+    --neutral-bg-custom: var(--neutral-bg-dark);
+    --card-bg-custom: var(--card-bg-dark);
+    --text-primary-custom: var(--text-primary-dark);
+    --text-secondary-custom: var(--text-secondary-dark);
+    --border-custom: var(--border-dark);
+    --success-custom: var(--accent-dark);
+  }
+
+  body {
+    background-color: var(--neutral-bg-dark);
+    color: var(--text-primary-dark);
+  }
+
+  .custom-card {
+    background-color: var(--card-bg-dark);
+  }
+
+  .form-control {
+    background-color: rgba(255, 255, 255, 0.05);
+    border-color: var(--border-dark);
+    color: var(--text-primary-dark);
+  }
+
+  .form-control:focus {
+    box-shadow: 0 0 0 3px rgba(144, 202, 249, 0.25);
+    border-color: var(--primary-dark);
+  }
+
+  .bg-light {
+    background-color: rgba(255, 255, 255, 0.05) !important;
+  }
+}
+
+/* Modal backdrop blur effect */
+.modal-backdrop.show {
+  opacity: 0.7;
+}
+
+/* Animation for modal */
+.modal.fade.show {
+  animation: modalFadeIn 0.3s ease forwards;
+}
+
+@keyframes modalFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
